@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eOY-HN-6jS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="EuZ-3L-4fh">
+            <objects>
+                <viewController id="eOY-HN-6jS" customClass="ViewController" customModule="SaveImageLocally" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m5j-WY-c7G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7tR-xO-jRg">
+                                <rect key="frame" x="20" y="95" width="374" height="207"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="207" id="pgH-03-cS7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IbP-NQ-jEc">
+                                <rect key="frame" x="20" y="463" width="374" height="207"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="374" id="BiX-lI-be4"/>
+                                    <constraint firstAttribute="height" constant="207" id="w73-0x-myL"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9lP-eD-eEn">
+                                <rect key="frame" x="190" y="310" width="34" height="30"/>
+                                <state key="normal" title="Save"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dpL-rz-PHO">
+                                <rect key="frame" x="137" y="678" width="140" height="30"/>
+                                <state key="normal" title="Display saved image"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7tR-xO-jRg" firstAttribute="top" secondItem="CZf-5E-SnO" secondAttribute="top" constant="51" id="0Tu-hQ-OOd"/>
+                            <constraint firstItem="CZf-5E-SnO" firstAttribute="trailing" secondItem="7tR-xO-jRg" secondAttribute="trailing" constant="20" id="15d-Pq-1dh"/>
+                            <constraint firstItem="dpL-rz-PHO" firstAttribute="top" secondItem="IbP-NQ-jEc" secondAttribute="bottom" constant="8" id="6Hl-Tb-JIY"/>
+                            <constraint firstItem="dpL-rz-PHO" firstAttribute="leading" secondItem="CZf-5E-SnO" secondAttribute="leading" constant="137" id="7Fv-74-a9R"/>
+                            <constraint firstItem="7tR-xO-jRg" firstAttribute="leading" secondItem="CZf-5E-SnO" secondAttribute="leading" constant="20" id="E6I-Uv-O0e"/>
+                            <constraint firstItem="CZf-5E-SnO" firstAttribute="bottom" secondItem="dpL-rz-PHO" secondAttribute="bottom" constant="154" id="IP2-25-f3p"/>
+                            <constraint firstItem="CZf-5E-SnO" firstAttribute="trailing" secondItem="dpL-rz-PHO" secondAttribute="trailing" constant="137" id="Jac-kA-osM"/>
+                            <constraint firstItem="CZf-5E-SnO" firstAttribute="trailing" secondItem="IbP-NQ-jEc" secondAttribute="trailing" constant="20" id="QmZ-0a-KSH"/>
+                            <constraint firstItem="CZf-5E-SnO" firstAttribute="trailing" secondItem="9lP-eD-eEn" secondAttribute="trailing" constant="190" id="VXt-kB-3DO"/>
+                            <constraint firstItem="9lP-eD-eEn" firstAttribute="leading" secondItem="CZf-5E-SnO" secondAttribute="leading" constant="190" id="dQR-qQ-aYR"/>
+                            <constraint firstItem="IbP-NQ-jEc" firstAttribute="leading" secondItem="CZf-5E-SnO" secondAttribute="leading" constant="20" id="m0G-sL-8Eb"/>
+                            <constraint firstItem="9lP-eD-eEn" firstAttribute="top" secondItem="7tR-xO-jRg" secondAttribute="bottom" constant="8" id="moB-Xt-vAA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="CZf-5E-SnO"/>
+                    </view>
+                    <connections>
+                        <outlet property="displaySavedImageButton" destination="dpL-rz-PHO" id="Zob-Up-epZ"/>
+                        <outlet property="imageToSaveImageView" destination="7tR-xO-jRg" id="MOI-td-4y9"/>
+                        <outlet property="saveImageButton" destination="9lP-eD-eEn" id="j5a-nx-8fu"/>
+                        <outlet property="savedImageDisplayImageView" destination="IbP-NQ-jEc" id="X1z-OS-Jqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X5H-tj-z6j" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="639" y="229"/>
+        </scene>
+    </scenes>
+</document>
